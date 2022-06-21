@@ -16,7 +16,7 @@ val_dataset:
     crop_size: 224
     shuffle: false
     drop_last: false
-optimizers:
+optimizer:
   decoupled_sgdw:
     lr: 2.048
     momentum: 0.875
