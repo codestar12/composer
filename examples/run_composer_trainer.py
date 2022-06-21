@@ -51,10 +51,7 @@ def _main() -> None:
     if dist.get_global_rank() == 0:
         with tempfile.NamedTemporaryFile(mode='x+') as f:
             f.write(hparams.to_yaml())
-            trainer.logger.file_artifact(LogLevel.FIT,
-                                         artifact_name=f'{trainer.state.run_name}/hparams.yaml',
-                                         file_path=f.name,
-                                         overwrite=True)
+            trainer.logger.file_artifact(LogLevel.FIT, artifact_name=f'hparams.yaml', file_path=f.name, overwrite=True)
 
     # Print the config to the terminal and log to artifact store if on each local rank 0
     if dist.get_local_rank() == 0:
