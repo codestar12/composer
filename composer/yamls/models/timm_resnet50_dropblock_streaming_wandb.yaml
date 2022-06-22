@@ -29,12 +29,12 @@ schedulers:
 loggers:
   wandb:
     project: "dropblock"
-    name: "resnet-imagenet-baseline"
+    name: "resnet-imagenet-dropblock"
 model:
   timm:
     model_name: resnet50
     num_classes: 1000
-    #drop_block_rate: 0.1
+    drop_block_rate: 0.1
 max_duration: 90ep
 train_batch_size: 2048
 eval_batch_size: 2048
