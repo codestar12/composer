@@ -32,7 +32,7 @@ loggers:
     name: "resnet-imagenet-dropblock"
 model:
   timm:
-    drop_block_rate: 0.1
+    drop_block_rate: 0.15
     num_classes: 1000
     model_name: resnet50
 max_duration: 90ep
