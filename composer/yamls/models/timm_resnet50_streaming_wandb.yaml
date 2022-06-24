@@ -29,7 +29,7 @@ schedulers:
 loggers:
   wandb:
     project: "dropblock"
-    name: "resnet-imagenet-baseline"
+    name: "resnet-imagenet-baseline-ssr3"
 model:
   timm:
     model_name: resnet50
